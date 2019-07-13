@@ -56,8 +56,10 @@ $res = mysqli_query($conn,$sql);
 $cnt = mysqli_num_rows($res);
 if($cnt==1){
   header("location:userdashboard.html");
+
 }else{
-  echo"NOT UNABE";
+  echo"<center>INVALID CREDENTIALS</center>";
+  include "login.html";
 }
 ?>
 >>>>>>> c921d894214f8c19eb9522feda19c4d5805b2ba7

@@ -24,28 +24,37 @@
          Videos
        </a>
        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-         <a class="dropdown-item" href="#1">Self awareness</a>
-         <a class="dropdown-item" href="#2">Self management</a>
-         <a class="dropdown-item" href="#3">Social awareness</a>
-         <a class="dropdown-item" href="#4">Relationship building</a>
-         <a class="dropdown-item" href="#5">Responsible decision building</a>
+         <a class="dropdown-item" href="selfawareness.php">Self awareness</a>
+         <a class="dropdown-item" href="selfmanagement.php">Self management</a>
+         <a class="dropdown-item" href="sociaawareness.php">Social awareness</a>
+         <a class="dropdown-item" href="relationshipbuilding.php">Relationship building</a>
+         <a class="dropdown-item" href="rdb.php">Responsible decision building</a>
        </div>
      </li>
    </ul>
    <ul class = "navbar-nav navbar-right">
      <li class="nav-item active">
-       <a class="nav-link" href="#">Sign Out <span class="sr-only">(current)</span></a>
+       <a class="nav-link" href="login.html">Sign Out <span class="sr-only">(current)</span></a>
      </li>
  </div>
 </nav>
 <br><br><br>
 <?php
-        //$connect = new mysqli('localhost','root','','cfg');
-	//$sql = "SELECT * FROM content WHERE id=1";
-	//$query=mysqli_query($connect,$sql);
-      	//$count = mysqli_num_rows($query);
-$count=5;
-        while($count>0){
+  $count=5;
+  $host="localhost";
+  $username="root";
+  $password="";
+  $databasename="cfg";
+  $yp = "sa";
+  $conn = new mysqli("localhost","root","","cfg");
+
+  session_start();
+  $user_ip = $_SESSION["email"];
+  // gets the user IP Address
+  $updateview = mysqli_query($conn,"update totalview set totalvisit = totalvisit+1 where page='$yp'");
+  $stmt = mysqli_fetch_row(mysqli_query($conn,"select totalvisit from totalview where page='$yp' "));
+
+    while($count>0){
             ?>
              <center>
         <div class="card" id="3" style="width: 20rem;">
@@ -53,6 +62,8 @@ $count=5;
         <h5 class="card-title">Video</h5>
         <p class="card-text">This is a video</p>
         <a href="#" class="btn btn-primary">Start watching</a>
+        <p>This page is viewed <?php echo $stmt[0];?> times.</p>
+
          </div>
         </div>
          </center>
@@ -60,6 +71,5 @@ $count=5;
          <?php
          $count=$count-1;
         }
-
 ?>
 </html>

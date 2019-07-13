@@ -22,15 +22,15 @@
      <div class="main">
         <div class="col-md-6 col-sm-12">
            <div class="login-form">
-              <form>
+              <form action="upload.php" method="post" enctype="multipart/form-data">
                  <div class="form-group">
                     <label>Name of the topic</label>
-                    <input type="text" class="form-control" placeholder="Name">
+                    <input type="text" class="form-control" placeholder="Name" name="name1">
                  </div>
 
                  <p>
                         <label>Content Type</label>
-                        <select id = "List">
+                        <select  name="list1">
                           <option value = "1">Self Awareness</option>
                           <option value = "2">Social Management</option>
                           <option value = "3">Social Awareness</option>
@@ -41,7 +41,7 @@
 
                  <div class="form-group">
                     <label>Pdf</label>
-                    <input type="file" name="pdf" accept="application/pdf">
+                    <input type="file" name="myfile" accept="application/pdf">
                     
                  </div>
                  <div class="form-group">
