@@ -9,7 +9,9 @@ $res = mysqli_query($conn,$sql);
 $cnt = mysqli_num_rows($res);
 if($cnt==1){
   header("location:userdashboard.html");
+
 }else{
-  echo"NOT UNABE";
+  echo"<center>INVALID CREDENTIALS</center>";
+  include "login.html";
 }
 ?>
