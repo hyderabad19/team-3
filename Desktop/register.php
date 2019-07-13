@@ -5,12 +5,10 @@ session_start();
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$username = $_POST["uname"];
-$pwd = md5($_POST["pwd1"]);
 $email = $_POST["email"];
-$gender = $_POST["gender"];
-$loc = $_POST["location"];
-$conn = new mysqli("localhost:3306","root","1234","saiteja");
+$password = md5($_POST["password"]);
+$school_name = $_POST["school_name"];
+$conn = new mysqli('localhost','root','','cfg');
 $_SESSION["email"]=$email;
 if($conn->connect_error)
 {
@@ -18,18 +16,18 @@ if($conn->connect_error)
 }
 else
 {
-    $sqlcheck = "select name from customer where email_address='".$email."';";
+    $sqlcheck = "select email from userdetails where email='".$email."';";
     if($conn->query($sqlcheck)->num_rows)
     {
         echo "Account already exists with specified email address";
-        include 'signup.html';
+        include 'register.html';
     }
     else{
-    $sqli = "insert into customer values('$username','$pwd','$email','$gender','$loc',0);";
+    $sqli = "insert into userdetails('$email','$password','$school_name');";
     if($conn->query($sqli)==TRUE)
     {
-        echo "account successfully created";
-        header("Location:email.php");
+        echo "Account successfully created";
+        header("Location:login.html");
         die();
     }
     else {
