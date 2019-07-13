@@ -9,13 +9,24 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        body {
-            background-color: #303641;
-        }
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .bg {
+  /* The image used */
+    background-image: url("learning_curve.jpg");
+    /* Full height */
+    opacity: 0.9;
+    height: 100%;  /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
     </style>
 </head>
 
-<body>
+<body class="bg">
     <div id="container-register">
         <div id="title">
             <i class="material-icons lock">lock</i> Register
