@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" ></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" ></script>	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+    background:#333;
+}
+.form_bg {
+    background-color:#eee;
+    color:#666;
+    padding:20px;
+    border-radius:10px;
+    position: absolute;
+    border:1px solid #fff;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 280px;
+}
+.align-center {
+    text-align:center;
+}
+        </style>
+    </head>
+
+    <body>        
+       <div class="container">
+    <div class="row">
+        <div class="form_bg">
+            <form method="post" action="adminlogin.php">
+                 <h2 class="text-center">Admin Login</h2>
+                <br/>
+                <div class="form-group">
+                    <input type="email" name="username" class="form-control" id="userid" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" id="pwd" placeholder="Password">
+                </div>
+                <br/>
+                <div class="align-center">
+                    <input type="submit" >        
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    </body>
+</html>

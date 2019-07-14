@@ -1,0 +1,50 @@
+<html>
+<head>
+
+
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+
+    <div class="sidenav">
+        <div class="login-main-text">
+           <h2>Content<br>Upload</h2>
+        </div>
+     </div>
+     <div class="main">
+        <div class="col-md-6 col-sm-12">
+           <div class="login-form">
+              <form action="upload.php" method="post" enctype="multipart/form-data">
+                 <div class="form-group">
+                    <label>Name of the topic</label>
+                    <input type="text" class="form-control" placeholder="Name" name="name1">
+                 </div>
+
+                 <p>
+                        <label>Content Type</label>
+                        <select  name="list1">
+                          <option value = "1">Self Awareness</option>
+                          <option value = "2">Social Management</option>
+                          <option value = "3">Social Awareness</option>
+                          <option value = "4">Relation Building</option>
+                          <option value = "5">Responsible Building</option>
+                        </select>
+                     </p>
+
+                 <div class="form-group">
+                    <label>Pdf</label>
+                    <input type="file" name="myfile" accept="application/pdf">
+                    
+                 </div>
+                 <div class="form-group">
+                        <label>Video</label>
+                        <input type="file" name="pic" accept="video/*">
+                        
+                     </div>
+                 <button type="submit" class="btn btn-black">submit</button>
+              </form>
+           </div>
+        </div>
+     </div>
+</body>
+</html>

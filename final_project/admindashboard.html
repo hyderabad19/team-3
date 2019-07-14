@@ -1,0 +1,80 @@
+
+
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" ></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" ></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+          .c2{
+            background-color: gray;
+            padding: 15px;
+          }
+    .one{
+      float: left;
+      }</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <a class="navbar-brand" href="#">Learning Curve.</a>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+       <ul class="navbar-nav">
+         <li class="nav-item active">
+           <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link" href="home.html">Sign out</a>
+         </li>
+         
+         <li class="nav-item active">
+           <a class="nav-link" href="search.html">Search New Topic</a>
+         </li>
+       </ul>
+     </div>
+   </nav>
+<center>
+<div class="sidenav">
+    <br>
+        <div class="login-main-text">
+           <h2>Content Upload</h2>
+        </div>
+     </div>
+     
+   <div class="card-body">
+    <h5 class="card-title">Content Type</h5>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+                 <div class="form-group">
+                    <label>Name of the topic</label>
+                    <input type="text" placeholder="Name" name="name1">
+                 </div>
+
+                 <p>
+                        <label>Content Type</label>
+                        <select  name="list1">
+                          <option value = "1">Self Awareness</option>
+                          <option value = "2">Social Management</option>
+                          <option value = "3">Social Awareness</option>
+                          <option value = "4">Relation Building</option>
+                          <option value = "5">Responsible Building</option>
+                        </select>
+                     </p>
+
+                 <div class="form-group">
+                    <label>Pdf</label>
+                    <input type="file" name="myfile" accept="application/pdf">
+
+                 </div>
+                 <div class="form-group">
+                        <label>Video</label>
+                        <input type="file" name="pic" accept="video/*">
+
+                     </div>
+  </div>
+
+  </center>
+</body>
+</html>
